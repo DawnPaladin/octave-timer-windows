@@ -73,6 +73,7 @@
     <Content Include="images\Wide310x150Logo.scale-200.png" />
     <Content Include="js\default.js" />
     <Content Include="css\default.css" />
+    <Content Include="js\jquery-2.1.4.js" />
     <Content Include="WinJS\css\ui-dark.css" />
     <Content Include="WinJS\css\ui-light.css" />
     <Content Include="WinJS\fonts\Symbols.ttf" />

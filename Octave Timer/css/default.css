@@ -4,6 +4,7 @@
    padding: 1em;
    border: 1px solid silver;
    border-radius: 5px;
+   text-align: center;
 }
 .timer-display {
     display: inline-block;
@@ -32,3 +33,6 @@ input {
     text-align: center;
 }
 .btn-primary { width: 100%; }
+.hidden {
+    display: none;
+}
