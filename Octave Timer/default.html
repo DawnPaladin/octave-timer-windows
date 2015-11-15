@@ -14,6 +14,23 @@
     <script src="/js/default.js"></script>
 </head>
 <body class="win-type-body">
-    <p>Content goes here</p>
+    <div id="octave-timer">
+        <div class="timer-display">00:00.00</div>
+        <progress value=0></progress>
+        <div class="timer-input">
+            <input type="number" id="minutes-input" class="timer-input" placeholder="00">m
+            <input type="number" id="seconds-input" class="timer-input" placeholder="00">s
+            <br>
+        </div>
+        <div class="timer-controls">
+            <button class="btn btn-primary start-btn"><span class="glyphicon glyphicon-play"></span></button>
+            <button class="btn btn-primary stop-btn hidden"><span class="glyphicon glyphicon-stop"></span></button>
+        </div>
+    </div>
+    <audio id="half-sound" src="audio/half.mp3"></audio>
+    <audio id="octave-sound" src="audio/octave.mp3"></audio>
+    <audio id="scale-sound" src="audio/scale.mp3"></audio>
+    <audio id="third-sound" src="audio/third.mp3"></audio>
+
 </body>
 </html>

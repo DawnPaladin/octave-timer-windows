@@ -1,2 +1,34 @@
-﻿body {
+﻿#octave-timer {
+   width: 160px;
+   margin: 10em auto 0;
+   padding: 1em;
+   border: 1px solid silver;
+   border-radius: 5px;
 }
+.timer-display {
+    display: inline-block;
+    font-size: 34px;
+    line-height: 36px;
+    margin-bottom: 5px;
+}
+progress {
+    display: inline-block;
+    width: 100%;
+}
+.timer-input {
+    width: 2em;
+    display: inline;
+    font-size: 22px;
+    margin-top: 8px;
+}
+input {
+    border: 1px solid white;
+    background-color: hsl(0, 7%, 97%);
+    border-radius: 5px;
+    text-align: right;
+}
+.timer-controls {
+    margin-top: 15px;
+    text-align: center;
+}
+.btn-primary { width: 100%; }
