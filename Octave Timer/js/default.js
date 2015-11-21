@@ -10,8 +10,12 @@
 	    if (args.detail.kind === activation.ActivationKind.launch) {
 			if (args.detail.previousExecutionState !== activation.ApplicationExecutionState.terminated) {
 			    // TODO: This application has been newly launched. Initialize your application here.
-			    var view = Windows.UI.ViewManagement.ApplicationView.getForCurrentView();
-			    view.tryResizeView({ height: 500, width: 500 });
+			    var ApplicationView = Windows.UI.ViewManagement.ApplicationView;
+			    var preferredSize = { height: 275, width: 320 };
+			    ApplicationView.preferredLaunchViewSize = preferredSize;
+			    ApplicationView.preferredLaunchWindowingMode = preferredSize;
+			    ApplicationView.getForCurrentView().setPreferredMinSize(preferredSize);
+			    ApplicationView.getForCurrentView().tryResizeView(preferredSize);
 			} else {
 				// TODO: This application was suspended and then terminated.
 				// To create a smooth user experience, restore application state here so that it looks like the app never stopped running.
