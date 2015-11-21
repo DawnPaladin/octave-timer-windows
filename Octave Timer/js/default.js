@@ -7,15 +7,18 @@
 	var activation = Windows.ApplicationModel.Activation;
 
 	app.onactivated = function (args) {
-		if (args.detail.kind === activation.ActivationKind.launch) {
+	    if (args.detail.kind === activation.ActivationKind.launch) {
 			if (args.detail.previousExecutionState !== activation.ApplicationExecutionState.terminated) {
-				// TODO: This application has been newly launched. Initialize your application here.
+			    // TODO: This application has been newly launched. Initialize your application here.
+			    var view = Windows.UI.ViewManagement.ApplicationView.getForCurrentView();
+			    view.tryResizeView({ height: 500, width: 500 });
 			} else {
 				// TODO: This application was suspended and then terminated.
 				// To create a smooth user experience, restore application state here so that it looks like the app never stopped running.
 			}
 			args.setPromise(WinJS.UI.processAll());
 		}
+		
 		function readableTimespan(milliseconds) {
 		    var secondSize = 1000;
 		    var minuteSize = secondSize * 60;
