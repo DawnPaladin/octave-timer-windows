@@ -107,15 +107,18 @@
 		        }
 		        if (timer.read().totalMilliseconds < 9) {
 		            play('scale-sound');
-		            timer.stop();
+		            timer.complete();
 		        }
-		    }, 10);
+		    }, 40);
 		    timer.stop = function () {
 		        clearInterval(timer.interval);
 		        $('.btn-primary').toggleClass('hidden');
+		        document.title = "Octave Timer";
+		    };
+		    timer.complete = function () {
+		        timer.stop();
 		        flash('.timer-display');
 		        $('.timer-display').text("00:00.00");
-		        document.title = "Octave Timer";
 		    };
 		    return timer;
 		}
