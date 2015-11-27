@@ -1,13 +1,13 @@
 ﻿body {
-    width: 320px;
+    background-color: white;
 }
 #octave-timer {
-   width: 160px;
-   margin: 50px auto;
+   width: 90%;
+   margin: auto;
+   height: 100%;
    padding: 1em;
-   border: 1px solid silver;
-   border-radius: 5px;
    text-align: center;
+    color: black;
 }
 .timer-display {
     display: inline-block;
@@ -26,9 +26,8 @@ progress {
     margin-top: 8px;
 }
 input {
-    border: 1px solid white;
     background-color: hsl(0, 7%, 97%);
-    border-radius: 5px;
+    border: 1px solid silver;
     text-align: right;
 }
 .timer-controls {

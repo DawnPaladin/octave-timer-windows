@@ -11,7 +11,7 @@
 			if (args.detail.previousExecutionState !== activation.ApplicationExecutionState.terminated) {
 			    // TODO: This application has been newly launched. Initialize your application here.
 			    var ApplicationView = Windows.UI.ViewManagement.ApplicationView;
-			    var preferredSize = { height: 275, width: 320 };
+			    var preferredSize = { height: 165, width: 250 };
 			    ApplicationView.preferredLaunchViewSize = preferredSize;
 			    ApplicationView.preferredLaunchWindowingMode = preferredSize;
 			    ApplicationView.getForCurrentView().setPreferredMinSize(preferredSize);
