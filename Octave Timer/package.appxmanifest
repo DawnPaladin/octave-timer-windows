@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
-  <Identity Name="38804DawnPaladinDesign.OctaveTimer" Version="1.0.0.0" Publisher="CN=3EA2619B-1C91-43B5-8AED-3B1B4C2FD25C" />
+  <Identity Name="38804DawnPaladinDesign.OctaveTimer" Version="1.1.0.0" Publisher="CN=3EA2619B-1C91-43B5-8AED-3B1B4C2FD25C" />
   <mp:PhoneIdentity PhoneProductId="cb7673ce-df33-4c59-9e6d-1601deec026c" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>Octave Timer</DisplayName>
@@ -16,7 +16,7 @@
   <Applications>
     <Application Id="App" StartPage="default.html">
       <uap:VisualElements DisplayName="Octave Timer" Description="Octave Timer" BackgroundColor="transparent" Square150x150Logo="images\Square150x150Logo.png" Square44x44Logo="images\Square44x44Logo.png">
-        <uap:LockScreen Notification="badge" BadgeLogo="images\Logo24x24.png" />
+        <uap:LockScreen Notification="badge" BadgeLogo="images\24x24Logo.png" />
         <uap:DefaultTile Wide310x150Logo="images\Wide310x150Logo.png" ShortName="Octave Timer" Square310x310Logo="images\Square310x310Logo.png" Square71x71Logo="images\Square71x71Logo.png">
           <uap:ShowNameOnTiles>
             <uap:ShowOn Tile="square150x150Logo" />
