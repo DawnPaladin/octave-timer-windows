@@ -1,0 +1,5 @@
+MainPackage=C:\Users\compu\Documents\Repositories\Visual Studio\Octave Timer\Octave Timer\bin\Release\Upload\Octave Timer_1.0.0.0_AnyCPU.appx
+ResourcePack=C:\Users\compu\Documents\Repositories\Visual Studio\Octave Timer\Octave Timer\_scale-100.appx
+ResourcePack=C:\Users\compu\Documents\Repositories\Visual Studio\Octave Timer\Octave Timer\_scale-125.appx
+ResourcePack=C:\Users\compu\Documents\Repositories\Visual Studio\Octave Timer\Octave Timer\_scale-150.appx
+ResourcePack=C:\Users\compu\Documents\Repositories\Visual Studio\Octave Timer\Octave Timer\_scale-400.appx

@@ -11,12 +11,17 @@
 			if (args.detail.previousExecutionState !== activation.ApplicationExecutionState.terminated) {
 			    // TODO: This application has been newly launched. Initialize your application here.
 			    var ApplicationView = Windows.UI.ViewManagement.ApplicationView;
-			    var preferredSize = { height: 165, width: 250 };
-			    ApplicationView.preferredLaunchViewSize = preferredSize;
-			    ApplicationView.preferredLaunchWindowingMode = preferredSize;
-			    ApplicationView.getForCurrentView().setPreferredMinSize(preferredSize);
-			    ApplicationView.getForCurrentView().tryResizeView(preferredSize);
-			} else {
+			    var mediumSize = { height: 275, width: 320 };
+			    var smallSize = { height: 165, width: 250 };
+			    ApplicationView.preferredLaunchViewSize = mediumSize;
+			    ApplicationView.preferredLaunchWindowingMode = mediumSize;
+			    ApplicationView.getForCurrentView().setPreferredMinSize(mediumSize);
+			    ApplicationView.getForCurrentView().tryResizeView(mediumSize);
+			    ApplicationView.preferredLaunchViewSize = smallSize;
+			    ApplicationView.preferredLaunchWindowingMode = smallSize;
+			    ApplicationView.getForCurrentView().setPreferredMinSize(smallSize);
+			    ApplicationView.getForCurrentView().tryResizeView(smallSize);
+            } else {
 				// TODO: This application was suspended and then terminated.
 				// To create a smooth user experience, restore application state here so that it looks like the app never stopped running.
 			}
