@@ -95,7 +95,8 @@
 		            var origTimespan = destination - start;
 		            var timeElapsed = Date.now() - start;
 		            return timeElapsed / origTimespan;
-		        }
+		        },
+		        running: false
 		    };
 		    timer.interval = setInterval(function () {
 		        var displayText = twoDigit(timer.read().minutes) + ":" + twoDigit(timer.read().seconds) + "." + twoDigit(timer.read().milliseconds);
@@ -119,17 +120,18 @@
 		        clearInterval(timer.interval);
 		        $('.btn-primary').toggleClass('hidden');
 		        document.title = "Octave Timer";
+		        timer.running = false;
 		    };
 		    timer.complete = function () {
 		        timer.stop();
 		        flash('.timer-display');
 		        $('.timer-display').text("00:00.00");
+		        timer.running = false;
 		    };
 		    return timer;
 		}
 
-		$("#octave-timer .start-btn").click(function () {
-		    alert("Clicked Start");
+		function startTimer() {
 		    var minutes = $('#minutes-input').val();
 		    var seconds = $('#seconds-input').val();
 		    if (minutes === "" && seconds === "") {
@@ -141,8 +143,9 @@
 		    $('.btn-primary').toggleClass('hidden');
 		    timer = timerFactory(timeToSet, $('#octave-timer'));
 		    play('octave-sound');
-		});
-
+		    timer.running = true;
+		}
+		$("#octave-timer .start-btn").click(startTimer);
 		$('#octave-timer .stop-btn').click(function () {
 		    timer.stop();
 		});
@@ -154,7 +157,17 @@
 		});
 		$('#minutes-input').val(localStorage.getItem("minutes"));
 		$('#seconds-input').val(localStorage.getItem("seconds"));
+		$(document).keypress(function (event) {
+		    if (event.which == 13) { // pressed Enter
+		        if (typeof timer == "object" && timer.running) { // timer running
+		            timer.stop();
+		        } else {
+		            startTimer();
+		        }
+		    }
+		});
 	};
+
 
 	app.oncheckpoint = function (args) {
 		// TODO: This application is about to be suspended. Save any state that needs to persist across suspensions here.
